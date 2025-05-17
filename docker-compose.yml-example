@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0.34
+    container_name: mysql0
+    environment:
+      MYSQL_ROOT_PASSWORD:
+      MYSQL_DATABASE:
+      MYSQL_USER:
+      MYSQL_PASSWORD:
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    command: --default-authentication-plugin=mysql_native_password
+    platform: linux
+    restart: always
+
+  redis:
+    image: redis:6.2-alpine
+    container_name: general-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    platform: linux
+    restart: always
+
+volumes:
+  mysql_data:
+  redis_data:

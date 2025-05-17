@@ -1,0 +1,22 @@
+# config.toml
+[Mysql]
+host = "8.138.199.xx"
+port = "3366"
+user = "root"
+password = "urpass"
+db="match"
+
+[Redis]
+host = "8.138.xxxx"
+port = "6379"
+password ="rexxxx"
+db = 3
+#block chain
+[Rpc]
+url = "https://base-sepolia.g.alchemy.com/v2/yourkey"
+p="0x40FdD63d60b1e95158e6CAF9C463275FE8c43f8A"
+#solana helius api key
+sol ="https://devnet.helius-rpc.com/?api-key=yourkey"
+[Sms]
+key ="ddd"
+secret="123"
